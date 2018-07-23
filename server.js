@@ -14,6 +14,8 @@ app.get('/produto/:productId/checkout/:checkoutId', function (req, res) {
   res.sendFile('checkout.html', { root: __dirname })
 })
 
+app.use('/produto/1321/checkout', express.static(__dirname + '/public'));
+
 const coupon = {
   id: 3,
   title: 'black friday',
